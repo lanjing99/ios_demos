@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XYTakenFreeTableViewCell : UITableViewCell
+@interface XYTakenFreeView : UIView
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "XYTakenFreeTableViewCell.h"
+#import "XYTakenFreeView.h"
 
 @interface ViewController ()
 
@@ -18,8 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    XYTakenFreeTableViewCell *cell = nil; //[[XYTakenFreeTableViewCell alloc] initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 250)];
-    NSArray *array = [[NSBundle mainBundle] loadNibNamed:@"XYTakenFreeTableViewCell" owner:nil options:nil];
+    XYTakenFreeView *cell = nil; //[[XYTakenFreeTableViewCell alloc] initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 250)];
+    NSArray *array = [[NSBundle mainBundle] loadNibNamed:@"XYTakenFreeView" owner:nil options:nil];
     cell = array.firstObject;
     cell.frame = CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 150);
     [self.view addSubview:cell];
