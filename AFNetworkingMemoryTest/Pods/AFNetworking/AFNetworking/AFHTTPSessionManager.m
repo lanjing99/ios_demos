@@ -84,6 +84,10 @@
     return self;
 }
 
+- (void)dealloc{
+    NSLog(@"in %s", __PRETTY_FUNCTION__);
+}
+
 #pragma mark -
 
 - (void)setRequestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer {
