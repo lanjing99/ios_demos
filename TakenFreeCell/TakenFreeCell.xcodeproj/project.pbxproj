@@ -16,7 +16,7 @@
 		3D700ADC1DE7CB54004B3AA9 /* XYTakenFreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D700ADA1DE7CB54004B3AA9 /* XYTakenFreeView.m */; };
 		3D700ADD1DE7CB54004B3AA9 /* XYTakenFreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D700ADB1DE7CB54004B3AA9 /* XYTakenFreeView.xib */; };
 		3D9B1CF51DED519400570BD7 /* UIView+RoundCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B1CF41DED519400570BD7 /* UIView+RoundCorners.m */; };
-		3D9B1CF81DED7B1900570BD7 /* NSString+AttributeNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B1CF71DED7B1900570BD7 /* NSString+AttributeNumbers.m */; };
+		3D9B1CF81DED7B1900570BD7 /* NSString+Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B1CF71DED7B1900570BD7 /* NSString+Attributed.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +35,8 @@
 		3D700ADB1DE7CB54004B3AA9 /* XYTakenFreeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYTakenFreeView.xib; sourceTree = "<group>"; };
 		3D9B1CF31DED519400570BD7 /* UIView+RoundCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundCorners.h"; sourceTree = "<group>"; };
 		3D9B1CF41DED519400570BD7 /* UIView+RoundCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundCorners.m"; sourceTree = "<group>"; };
-		3D9B1CF61DED7B1900570BD7 /* NSString+AttributeNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AttributeNumbers.h"; sourceTree = "<group>"; };
-		3D9B1CF71DED7B1900570BD7 /* NSString+AttributeNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AttributeNumbers.m"; sourceTree = "<group>"; };
+		3D9B1CF61DED7B1900570BD7 /* NSString+Attributed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Attributed.h"; sourceTree = "<group>"; };
+		3D9B1CF71DED7B1900570BD7 /* NSString+Attributed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Attributed.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +75,8 @@
 				3D700AC61DE7CA48004B3AA9 /* ViewController.m */,
 				3D9B1CF31DED519400570BD7 /* UIView+RoundCorners.h */,
 				3D9B1CF41DED519400570BD7 /* UIView+RoundCorners.m */,
-				3D9B1CF61DED7B1900570BD7 /* NSString+AttributeNumbers.h */,
-				3D9B1CF71DED7B1900570BD7 /* NSString+AttributeNumbers.m */,
+				3D9B1CF61DED7B1900570BD7 /* NSString+Attributed.h */,
+				3D9B1CF71DED7B1900570BD7 /* NSString+Attributed.m */,
 				3D700AD91DE7CB54004B3AA9 /* XYTakenFreeView.h */,
 				3D700ADA1DE7CB54004B3AA9 /* XYTakenFreeView.m */,
 				3D700ADB1DE7CB54004B3AA9 /* XYTakenFreeView.xib */,
@@ -173,7 +173,7 @@
 				3D700AC71DE7CA48004B3AA9 /* ViewController.m in Sources */,
 				3D700AC41DE7CA48004B3AA9 /* AppDelegate.m in Sources */,
 				3D9B1CF51DED519400570BD7 /* UIView+RoundCorners.m in Sources */,
-				3D9B1CF81DED7B1900570BD7 /* NSString+AttributeNumbers.m in Sources */,
+				3D9B1CF81DED7B1900570BD7 /* NSString+Attributed.m in Sources */,
 				3D700ADC1DE7CB54004B3AA9 /* XYTakenFreeView.m in Sources */,
 				3D700AC11DE7CA48004B3AA9 /* main.m in Sources */,
 			);

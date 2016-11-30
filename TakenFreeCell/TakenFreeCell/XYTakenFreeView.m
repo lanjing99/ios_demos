@@ -8,7 +8,7 @@
 
 #import "XYTakenFreeView.h"
 #import "UIView+RoundCorners.h"
-#import "NSString+AttributeNumbers.h"
+#import "NSString+Attributed.h"
 
 @interface XYTakenFreeView ()
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;

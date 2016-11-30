@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "XYTakenFreeView.h"
-#import "NSString+AttributeNumbers.h"
+#import "NSString+Attributed.h"
 
 @interface ViewController ()
 

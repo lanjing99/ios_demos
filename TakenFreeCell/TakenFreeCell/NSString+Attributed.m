@@ -6,7 +6,7 @@
 //  Copyright © 2016 陈文经. All rights reserved.
 //
 
-#import "NSString+AttributeNumbers.h"
+#import "NSString+Attributed.h"
 
 @implementation NSString(AttributeNumbers)
 
