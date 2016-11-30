@@ -8,6 +8,7 @@
 
 #import "XYTakenFreeView.h"
 #import "UIView+RoundCorners.h"
+#import "NSString+AttributeNumbers.h"
 
 @interface XYTakenFreeView ()
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
@@ -18,6 +19,10 @@
 @property (strong, nonatomic) NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UIView *frontgroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *topTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *secondTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bottomTitleLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *backgroundTopTitleLabelWidthConstraint;
 
 @end
 
@@ -41,6 +46,16 @@
     [self.backgroundTopTitleLabel xy_setRoundCorners:UIRectCornerAllCorners withRadius:10];
     [self.backgroundMiddleTitleLabel xy_setRoundCorners:UIRectCornerAllCorners withRadius:10];
     
+    
+    NSDictionary *digitAttribute = @{NSFontAttributeName:[UIFont systemFontOfSize:15], NSForegroundColorAttributeName:[UIColor whiteColor], };
+    NSDictionary *otherAttribute = @{NSFontAttributeName:[UIFont systemFontOfSize:11], NSForegroundColorAttributeName:[UIColor whiteColor], };
+    
+    NSAttributedString *attributeString = [self.topTitleLabel.text xy_attributeStringWithDigitsAttributes:digitAttribute andOthersAttributes:otherAttribute];
+    self.topTitleLabel.attributedText = attributeString;
+    CGSize size = [attributeString size];
+//    self.backgroundTopTitleLabelWidthConstraint.constant = size.width + 20;
+    [self.backgroundTopTitleLabel setNeedsUpdateConstraints];
+    [self setNeedsUpdateConstraints];
 }
 
 
@@ -54,6 +69,12 @@
 
 
 - (void)startAnimation{
+    
+//    CGSize size = [self.topTitleLabel.attributedText size];
+//    self.backgroundTopTitleLabelWidthConstraint.constant = size.width + 20;
+//    [self setNeedsUpdateConstraints];
+//    [self setNeedsLayout];
+    
     CGRect initialFrame = self.frontgroundView.frame;
     CGRect animationFrame = initialFrame;
     animationFrame.origin.y -= animationFrame.size.height;

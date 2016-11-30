@@ -30,6 +30,7 @@
                                     <rect key="frame" x="110.5" y="73" width="80.5" height="22"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
                                     <constraints>
+                                        <constraint firstAttribute="width" constant="80.5" id="Zoj-eo-k2V"/>
                                         <constraint firstAttribute="height" constant="22" id="y8u-Fl-PUU"/>
                                     </constraints>
                                 </view>
@@ -81,6 +82,7 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="仅剩8198份" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANY-h7-HhE">
                                     <rect key="frame" x="120" y="73" width="60.5" height="22"/>
+                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="22" id="m4V-pJ-oHW"/>
                                     </constraints>
@@ -144,7 +146,6 @@
                 <constraint firstItem="hsj-Nb-YUO" firstAttribute="leading" secondItem="hw9-Zg-1nn" secondAttribute="leading" id="Lvf-9b-AWM"/>
                 <constraint firstItem="FdZ-xQ-Cs1" firstAttribute="leading" secondItem="hw9-Zg-1nn" secondAttribute="leading" id="MaR-Pe-cdS"/>
                 <constraint firstAttribute="trailing" secondItem="FdZ-xQ-Cs1" secondAttribute="trailing" id="SN2-zY-wQi"/>
-                <constraint firstItem="dnO-bE-AF7" firstAttribute="width" secondItem="ANY-h7-HhE" secondAttribute="width" constant="20" id="b35-P8-GnU"/>
                 <constraint firstItem="hsj-Nb-YUO" firstAttribute="top" secondItem="hw9-Zg-1nn" secondAttribute="top" id="eWF-pP-OZv"/>
                 <constraint firstItem="fzn-ix-lGc" firstAttribute="width" secondItem="mRG-Gm-Q3p" secondAttribute="width" constant="18" id="fp2-Eb-xli"/>
                 <constraint firstAttribute="bottom" secondItem="FdZ-xQ-Cs1" secondAttribute="bottom" id="xye-bN-MzS"/>
@@ -157,8 +158,12 @@
                 <outlet property="backgroundImageView" destination="AN6-cF-pkX" id="4p8-le-vEe"/>
                 <outlet property="backgroundMiddleTitleLabel" destination="fzn-ix-lGc" id="ObX-1i-EWx"/>
                 <outlet property="backgroundTopTitleLabel" destination="dnO-bE-AF7" id="Uup-hs-JPj"/>
+                <outlet property="backgroundTopTitleLabelWidthConstraint" destination="Zoj-eo-k2V" id="fW3-Wy-DqV"/>
+                <outlet property="bottomTitleLabel" destination="nfx-L6-uc0" id="jnM-K6-dGI"/>
                 <outlet property="frontgroundView" destination="FdZ-xQ-Cs1" id="0Uc-7J-oqK"/>
                 <outlet property="imageView" destination="4Pn-GZ-E52" id="B7d-si-bEg"/>
+                <outlet property="secondTitleLabel" destination="mRG-Gm-Q3p" id="0GD-Ip-EYS"/>
+                <outlet property="topTitleLabel" destination="ANY-h7-HhE" id="T6I-xC-uHx"/>
             </connections>
             <point key="canvasLocation" x="669" y="544"/>
         </view>
