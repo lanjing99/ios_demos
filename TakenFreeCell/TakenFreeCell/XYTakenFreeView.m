@@ -43,8 +43,10 @@
     
     self.clipsToBounds = YES;
     [self.imageView xy_setRoundCorners:UIRectCornerBottomRight withRadius:49/2.0];
-    [self.backgroundTopTitleLabel xy_setRoundCorners:UIRectCornerAllCorners withRadius:10];
-    [self.backgroundMiddleTitleLabel xy_setRoundCorners:UIRectCornerAllCorners withRadius:10];
+    [self.backgroundTopTitleLabel xy_setRoundCorners:UIRectCornerAllCorners withRadius:self.backgroundTopTitleLabel.bounds.size.height/2];
+    [self.backgroundMiddleTitleLabel xy_setRoundCorners:UIRectCornerAllCorners withRadius:self.backgroundMiddleTitleLabel.bounds.size.height/2];
+//    self.backgroundTopTitleLabel.layer.cornerRadius = 10;
+//    self.backgroundTopTitleLabel.clipsToBounds = YES;
     
     
     NSDictionary *digitAttribute = @{NSFontAttributeName:[UIFont systemFontOfSize:15], NSForegroundColorAttributeName:[UIColor whiteColor], };
@@ -53,9 +55,10 @@
     NSAttributedString *attributeString = [self.topTitleLabel.text xy_attributeStringWithDigitsAttributes:digitAttribute andOthersAttributes:otherAttribute];
     self.topTitleLabel.attributedText = attributeString;
     CGSize size = [attributeString size];
-//    self.backgroundTopTitleLabelWidthConstraint.constant = size.width + 20;
-    [self.backgroundTopTitleLabel setNeedsUpdateConstraints];
-    [self setNeedsUpdateConstraints];
+    self.backgroundTopTitleLabelWidthConstraint.constant =  size.width + 20;
+//    self.backgroundTopTitleLabelWidthConstraint.constant = 0;
+//    [self.backgroundTopTitleLabel setNeedsUpdateConstraints];
+//    [self setNeedsUpdateConstraints];
 }
 
 
