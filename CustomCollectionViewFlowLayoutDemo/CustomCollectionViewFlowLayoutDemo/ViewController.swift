@@ -33,7 +33,7 @@ class ViewController: UIViewController{
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 20
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -55,7 +55,7 @@ extension ViewController: UICollectionViewDataSource {
 //MARK: for collectionView
 extension ViewController{
     func configueCollectionView() {
-        flowLayout.itemSize = CGSize.init(width: UIScreen.main.bounds.width/2, height: 68)
+        flowLayout.itemSize = CGSize.init(width: UIScreen.main.bounds.width/4, height: 68)
         flowLayout.minimumInteritemSpacing = 0
         collectionView.register(UINib.init(nibName: "TestCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: XYCollectionSupplementaryViewCellSeperator, withReuseIdentifier: XYCollectionSupplementaryViewCellSeperator)
@@ -63,7 +63,51 @@ extension ViewController{
     }
 }
 
-extension ViewController: UICollectionViewDelegateFlowLayout {
+extension ViewController: XYCollectionViewSeperatorDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: XYCollectionViewSeperatorFlowLayout, needSeperatorAt indexPath:IndexPath, of kind:String) -> Bool {
+        if kind == XYCollectionSupplementaryViewCellSeperator {
+            //第0列后面跟一个分隔符
+            if indexPath.row % 4 != 3 {
+                return true
+            }else{
+                return false
+            }
+        }else if kind == XYCollectionSupplementaryViewLineSeperator {
+            let itemsCount = collectionView.dataSource!.collectionView(collectionView, numberOfItemsInSection: indexPath.section)
+            
+            if (indexPath.row % 2 == 0) && indexPath.row < itemsCount - 2 {
+                return true
+            }else{
+                return false
+            }
+        }
+        //不应该有其它的类型
+        return false
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: XYCollectionViewSeperatorFlowLayout, seperatorAttributeWith formerItemAttribute: UICollectionViewLayoutAttributes?, of kind: String) -> UICollectionViewLayoutAttributes? {
+        
+        guard let formerAttribute = formerItemAttribute else {
+            return nil
+        }
+        
+        if kind == XYCollectionSupplementaryViewCellSeperator {
+            let attributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: XYCollectionSupplementaryViewCellSeperator, with: formerAttribute.indexPath)
+            let cellFrame = formerAttribute.frame
+            let frame = CGRect.init(x: cellFrame.maxX, y: cellFrame.minY + 31/2, width: 0.5, height: cellFrame.height - 31)
+            attributes.frame = frame
+            return attributes
+        }else if kind == XYCollectionSupplementaryViewLineSeperator {
+            let attributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: XYCollectionSupplementaryViewLineSeperator, with: formerAttribute.indexPath)
+            let cellFrame = formerAttribute.frame
+            let frame = CGRect.init(x: cellFrame.minX, y: cellFrame.maxY - 0.5, width: 2 * cellFrame.width, height:0.5)
+            attributes.frame = frame
+            return attributes
+        }
+        //不应该有其它的类型
+        return nil
+    }
     
 }
 
