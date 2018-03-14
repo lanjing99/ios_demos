@@ -1,5 +1,4 @@
 source 'https://github.com/CocoaPods/Specs.git'  # 官方库
-source 'https://git.yingzhongtong.com/digteam/iOS-pods-spec.git' #小赢私有库
 platform :ios, '7.0'
 
 target 'AFNetworkingMemoryTest' do
